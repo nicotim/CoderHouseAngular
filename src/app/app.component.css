@@ -1,0 +1,13 @@
+p {
+  color: blue;
+}
+
+app-page-wrapper {
+  display: flex;
+  text-align: center;
+  margin-left: 5vh;
+  padding: 20px;
+  margin-top: 1rem;
+  margin-left: 20vh;
+  height: 70vh;
+}
