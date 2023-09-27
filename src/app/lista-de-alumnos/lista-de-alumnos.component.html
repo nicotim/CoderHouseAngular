@@ -1,0 +1,10 @@
+<h1>Lista de alumnos</h1>
+
+<div class="alumnos">
+  <ul>
+    <li *ngFor="let alumno of alumnos" [ngStyle]="{color: alumno.aprobado === true ? 'red' : 'green'}">
+        {{alumno.nombre | uppercase}} - {{alumno.fechaDeInscripcion | date:'shortDate'}} - {{alumno.materia | uppercase}}
+    <button class="btn" (click)="alumno.aprobado  = !alumno.aprobado">Aprobado</button>
+    </li>
+  </ul>
+</div>

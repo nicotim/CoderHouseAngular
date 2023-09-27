@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.alumnos li {
+  margin-top: 25px;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  list-style-type: none;
+  font-size: large;  
+}
+
+.btn {
+  margin: 15px;
+}
