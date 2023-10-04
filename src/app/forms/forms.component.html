@@ -1,0 +1,45 @@
+<h2>Formulario de inscripcion de alumnos</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" id="form">
+    <div class="col">
+      <input
+        formControlName="nombre"
+        [ngClass]="{ 'is-invalid': nombreControl.invalid && nombreControl.touched}"
+        type="text" 
+        class="form-control"
+        placeholder="Nombre">
+    </div>
+    <div class="col">
+      <input
+        formControlName="materia" 
+        [ngClass]="{ 'is-invalid': materiaControl.invalid && materiaControl.touched}"
+        type="text" 
+        class="form-control" 
+        placeholder="Materia">
+    </div>
+    <div class="mb-3">
+      <input 
+        formControlName="email" 
+        type="email" 
+        class="form-control" 
+        [ngClass]="{ 'is-invalid': emailControl.invalid && emailControl.touched}"
+        placeholder="name@example.com">
+        <div class="invalid-feedback">
+          <ng-container *ngIf="emailControl.errors?.['required']">
+            Rellenar el campo
+          </ng-container>
+          <ng-container *ngIf="emailControl.errors?.['email']">
+            El email no es valido
+          </ng-container>
+        </div>
+  </div>
+
+  <button
+    class="btn btn-primary" 
+    type="submit"
+    >Enviar</button>
+</form>
+
+
+
+{{ userForm.value | json }}

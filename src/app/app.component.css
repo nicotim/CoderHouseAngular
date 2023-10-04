@@ -1,7 +1,3 @@
-p {
-  color: blue;
-}
-
 app-page-wrapper {
   display: flex;
   text-align: center;
@@ -10,4 +6,11 @@ app-page-wrapper {
   margin-top: 1rem;
   margin-left: 20vh;
   height: 70vh;
+}
+
+app-forms {
+  margin-top: 25px;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
 }
